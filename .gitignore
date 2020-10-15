@@ -2,3 +2,4 @@
 *.DS_Store*
 lossdev.pem
 lossdev.key
+*__pycache__*
