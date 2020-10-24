@@ -1,0 +1,145 @@
+@font-face {
+    font-family: "JetBrainsMono";
+    src: url("../assets/JetBrainsMono-Medium.ttf");
+}
+
+/* disable selecting text to all elements by default */
+body * {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+:root {
+    --main-light-bg-color: WhiteSmoke;
+    --main-light-text-color: #1a1a1a;
+    --main-dark-bg-color: #333;
+    --main-dark-text-color: FloralWhite;
+}
+
+#body {
+    background-color: var(--main-dark-bg-color);
+    transition: background-color 300ms linear;
+    -webkit-transition: background-color 300ms linear;
+    -moz-transition: background-color 300ms linear;
+}
+
+.text {
+    color: var(--main-dark-text-color);
+    font-family: "JetBrainsMono", "Dank Monospace", ui-monspace, monospace;
+}
+
+.no-decorate {
+    text-decoration: none;
+    color: var(--main-dark-text-color);
+}
+
+.no-decorate:hover {
+    color: hsl(204 100% 59%);
+    cursor: pointer;
+}
+
+.select-disable {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+
+.flex-outer-align {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.flex-inner-align {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#moonIcon, #lightIcon {
+    text-decoration: none;
+    color: var(--main-light-text-color);
+}
+
+#lightIcon {
+    color: var(--main-dark-text-color);
+}
+
+#moonIcon:hover, #lightIcon:hover {
+    color: hsl(204 100% 59%)
+}
+
+.pagelink, .header-link {
+    font-family: "JetBrainsMono", "Dank Monospace", ui-monospace, monospace;
+}
+
+.header-link {
+    font-size: 2.5vmax;
+    padding: 10px;
+    box-shadow: 0 0 1pt 1pt FloralWhite;;
+}
+
+.darkIconRegular {
+    font-size: 2.5vmax;
+}
+
+.darkIconSm {
+    font-size: 4vmax;
+}
+
+.nav-spacer, .content-spacer {
+    position: relative;
+    height: 100%;
+    width: 5%;
+}
+
+.content-spacer {
+    width: 10%;
+}
+
+.mobile-lh {
+    line-height: max(6vmax, 50px);
+}
+
+.desktop-lh {
+    line-height: max(3.5vmax, 60px);
+}
+
+.fading-text-wrapper .text-wrapper {
+    position: relative;
+    display: inline-block;
+    padding-top: 0.1em;
+    padding-right: 0.05em;
+    padding-bottom: 0.15em;
+}
+  
+.fading-text-wrapper .letter {
+    display: inline-block;
+    line-height: 1em;
+}
+
+.carousel-wrapper, .carousel-wrapper-mobile {
+    position: relative;
+    height: 100%;
+    width: 40%;
+}
+
+.carousel-wrapper-mobile {
+    width: 90%;
+}
+
+.carousel-img {
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.7;
+}
+
+.icon-spacer {
+    margin: 0 20px;
+}
