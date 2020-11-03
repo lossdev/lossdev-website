@@ -29,6 +29,8 @@ var (
 	// log paths
 	httpLogPath   = "http.log"
 	accessLogPath = "access.log"
+	keyPath       = "../lossdev.key"
+	pemPath       = "../lossdev.pem"
 )
 
 func main() {
@@ -52,6 +54,8 @@ func main() {
 		attemptCreateLogDir()
 		httpLogPath = "/var/log/lossdev/http.log"
 		accessLogPath = "/var/log/lossdev/access.log"
+		keyPath = "/var/www/html/lossdev.key"
+		pemPath = "/var/www/html/lossdev.pem"
 	}
 
 	// TLS config options - only use tls >= TLS1.2 and set suite ciphers
@@ -123,7 +127,7 @@ func main() {
 
 	httpLogger.Println("[READY] Serving at https://localhost:" + serverPort)
 	go http.ListenAndServe(":80", http.HandlerFunc(redirect))
-	log.Fatal(srv.ListenAndServeTLS("../lossdev.pem", "../lossdev.key"))
+	log.Fatal(srv.ListenAndServeTLS(pemPath, keyPath))
 	<-doneChannel
 }
 
