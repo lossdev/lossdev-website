@@ -2,4 +2,6 @@
 *.DS_Store*
 lossdev.pem
 lossdev.key
-*__pycache__*
+src/*.log
+src/go.mod
+src/server
